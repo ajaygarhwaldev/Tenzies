@@ -1,38 +1,116 @@
-.App {
+/* Fonts here */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+  background: #0ecc3e;
+  background: linear-gradient(135deg, #0ecc3e, #4b4ba9);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav {
+  padding: 1rem;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.custom-button {
+  padding: 0.75rem 1.5rem;
+  background-color: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.custom-button:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+/* Timer Container here */
+.timer-container {
+  display: flex;
+  flex-direction: row;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+h2 {
+  font-weight: 100;
+  font-size: 6rem;
+  margin: 0;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* Dice Button */
+
+.dice-button {
+  flex: 0 0 20%;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  font-size: 1.5rem;
+  text-align: center;
+  border: none;
+  padding: 2rem 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.dice-button:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.dice-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: center;
+  padding: 2rem 20rem;
+}
+
+/* Instruction container here */
+
+.transparent-effect {
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rules {
+  background-color: rgba(255, 255, 255, 0.8);
+  margin: 0 5rem;
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: left;
+  position: relative;
+}
+
+.close-button {
+  padding: 0.75rem 1.5rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1rem;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: white;
+}
+
+.close-button:hover {
+  background-color: rgba(0, 0, 0, 0.7);
 }
